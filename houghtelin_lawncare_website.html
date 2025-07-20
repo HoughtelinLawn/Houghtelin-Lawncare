@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Houghtelin Lawncare LLC</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+    header { background: #2e7d32; color: white; padding: 40px 20px; display: flex; align-items: center; justify-content: flex-start; gap: 20px; }
+    header img { height: 80px; width: auto; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    nav { background: #1b5e20; color: white; display: flex; justify-content: center; gap: 20px; padding: 15px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .services, .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    footer { background: #2e7d32; color: white; text-align: center; padding: 20px; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #1b5e20; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="data:image/png;base64,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" alt="Houghtelin Lawncare Logo">
+    <div>
+      <h1>Houghtelin Lawncare LLC</h1>
+      <p>Where passion meets professionalism</p>
+      <a href="#contact" style="display:inline-block;margin-top:10px;background:#1b5e20;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">Request a Free Estimate</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Houghtelin Lawncare LLC, we provide dependable lawn maintenance with a focus on professionalism, quality, and fast service. We serve both residential and commercial properties and are committed to keeping your outdoor space looking its best year-round.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Lawn Mowing</h3>
+        <p>Consistent mowing with crisp, clean results every time.</p>
+      </div>
+      <div class="card">
+        <h3>Trimming & Blowing</h3>
+        <p>Edges trimmed and all debris blown for a polished finish.</p>
+      </div>
+      <div class="card">
+        <h3>Shrub Pruning</h3>
+        <p>Expert shaping and trimming to maintain healthy growth and curb appeal.</p>
+      </div>
+      <div class="card">
+        <h3>Mulching</h3>
+        <p>Fresh mulch installation to protect your beds and boost appearance.</p>
+      </div>
+      <div class="card">
+        <h3>Seasonal Cleanups</h3>
+        <p>Spring and fall cleanups to prep your lawn for the season ahead.</p>
+      </div>
+      <div class="card">
+        <h3>Fertilizer & Weed Control</h3>
+        <p>Keep your lawn healthy, green, and weed-free with our applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>“Brandon is professional and always leaves our lawn looking perfect. Highly recommend!”</p>
+        <strong>- Sarah T.</strong>
+      </div>
+      <div class="card">
+        <p>“Reliable, friendly, and thorough. We’re so glad we found Houghtelin Lawncare.”</p>
+        <strong>- Mark R.</strong>
+      </div>
+      <div class="card">
+        <p>“My yard has never looked better. Great service and communication!”</p>
+        <strong>- Emily J.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Call or email today for your free estimate!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Your Phone Number" />
+      <textarea rows="5" placeholder="Tell us what you need..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:Houghtelin.brandon@gmail.com">Houghtelin.brandon@gmail.com</a><br />Phone: <a href="tel:5074059535">507-405-9535</a></p>
+  </section>
+
+  <footer>
+    <p>Houghtelin Lawncare LLC | Serving Southern Minnesota<br />&copy; 2025 Houghtelin Lawncare LLC</p>
+  </footer>
+</body>
+</html>
